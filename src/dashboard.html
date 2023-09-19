@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="/dist/css/main.css">
     <title>Dashboard</title>
 </head>
@@ -11,12 +12,18 @@
     <div id="app">
 
         <header class="dashboard-header">
-            <h1>Today's Tasks</h1>
-            <span id="date"></span>
+            <div>
+                <h1>Today's Tasks</h1>
+                <span id="username"></span>
+            </div>
+            <div class="date">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span id="date"></span>
+            </div>
         </header>
 
         <div class="tasks-container">
-            <ul id="tasks"></ul>
+            <ul id="taskList"></ul>
         </div>
 
         <div class="btn-logout-container">

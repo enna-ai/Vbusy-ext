@@ -1,5 +1,20 @@
 @import "variables";
 
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: $mantle;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $base-light;
+    border: 2px solid $mantle;
+    border-radius: 4px;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -16,10 +31,9 @@ body {
     overflow: auto;
     background: $mantle;
     color: $white;
-    margin: 5px;
 
-    > * {
-        margin: 20px;
+    >* {
+        margin: 12px;
     }
 }
 
@@ -43,6 +57,25 @@ body {
 
     h1 {
         font-size: 20px;
+        margin: 2px;
+    }
+
+    #username {
+        color: $white-light;
+        font-style: italic;
+        font-size: 14px;
+    }
+
+    .date {
+        .fa-calendar-days {
+            font-size: 16px;
+            padding-right: 4px;
+            color: $yellow;
+        }
+    
+        #date {
+            font-size: 18px;
+        }
     }
 }
 
@@ -84,7 +117,7 @@ form {
             color: $mantle;
             transition: transform 0.2s ease-in-out;
             cursor: pointer;
-        
+
             &:hover {
                 background-color: $yellow-light;
                 transform: translateY(-3px);
@@ -108,7 +141,7 @@ form {
         color: $mantle;
         transition: transform 0.2s ease-in-out;
         cursor: pointer;
-    
+
         &:hover {
             background-color: $yellow-light;
             transform: translateY(-3px);
@@ -124,16 +157,35 @@ form {
         flex-direction: column;
 
         li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: $base;
-            color: $white-trans;
+            color: $white;
             border-radius: 5px;
             padding: 10px;
             margin-bottom: 10px;
+
+            input[type="checkbox"]:checked {
+                accent-color: $yellow;
+            }
+
+            button {
+                border: none;
+                background-color: $yellow;
+                color: $mantle;
+                border-radius: 5px;
+                cursor: pointer;
+            }
 
             &::selection {
                 background-color: $base-lightest;
                 color: $yellow;
             }
+        }
+
+        .completed {
+            text-decoration: line-through;
         }
     }
 }
