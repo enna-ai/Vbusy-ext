@@ -1,0 +1,21 @@
+{
+    "name": "Vbusy",
+    "description": "Are you v busy? Get v productive with Vbusy!",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "author": "enna-ai",
+    "action": {
+        "default_popup": "src/popup.html",
+        "default_title": "Vbusy",
+        "default_icon": {
+            "18": "assets/bee-18.png",
+            "56": "assets/bee-56.png",
+            "112": "assets/bee-112.png"
+        }
+    },
+    "icons": {
+        "18": "assets/bee-18.png",
+        "56": "assets/bee-56.png",
+        "112": "assets/bee-112.png"
+    }
+}

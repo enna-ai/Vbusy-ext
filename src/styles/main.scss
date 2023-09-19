@@ -1,0 +1,139 @@
+@import "variables";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background: $mantle;
+}
+
+#app {
+    width: 280px;
+    height: 400px;
+    overflow: auto;
+    background: $mantle;
+    color: $white;
+    margin: 5px;
+
+    > * {
+        margin: 20px;
+    }
+}
+
+.popup-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        margin-top: 40px;
+        width: 60px;
+    }
+}
+
+.dashboard-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    input {
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: $base;
+        caret-color: $white-trans;
+        color: $white-trans;
+
+        &:focus {
+            background-color: $base-light;
+        }
+
+        &:active {
+            background-color: $base-light;
+        }
+
+        &::placeholder {
+            padding-left: 4px;
+            color: $white-trans;
+        }
+    }
+
+    .btn-login-container {
+        button {
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            padding: 6px;
+            background-color: $yellow;
+            color: $mantle;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+        
+            &:hover {
+                background-color: $yellow-light;
+                transform: translateY(-3px);
+            }
+        }
+    }
+}
+
+#error-message {
+    font-size: 14px;
+    color: $red;
+}
+
+.btn-logout-container {
+    button {
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        padding: 6px;
+        background-color: $yellow;
+        color: $mantle;
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: $yellow-light;
+            transform: translateY(-3px);
+        }
+    }
+}
+
+.tasks-container {
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+
+        li {
+            background-color: $base;
+            color: $white-trans;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+
+            &::selection {
+                background-color: $base-lightest;
+                color: $yellow;
+            }
+        }
+    }
+}
