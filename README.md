@@ -8,7 +8,7 @@
   </p>
 </div>
 
-## CLI
+## At a glance
 <table>
   <tr>
     <td>
